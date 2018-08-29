@@ -1,5 +1,4 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +10,10 @@
 </head>
 
 <body>
+    {{#if errorMessage}}
+        <div class="error-message">{{ errorMessage }}</div>
+    {{/if}}
+    {{{captcha}}}
   <form id="form" action="/signup" method="POST">
     <label for="username">Username</label><br>
     <input type="text" name="username"
